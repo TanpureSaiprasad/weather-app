@@ -8,7 +8,7 @@ function getWeather() {
       return;
     }
   
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=yes`)
       .then((response) => {
         if (!response.ok) throw new Error("City not found");
         return response.json();
